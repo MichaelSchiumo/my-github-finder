@@ -14,7 +14,7 @@ export class Search extends Component {
   };
 
   handleChange = (event) => {
-    this.setState({ text: event.target.text });
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   handleSubmit = (event) => {
