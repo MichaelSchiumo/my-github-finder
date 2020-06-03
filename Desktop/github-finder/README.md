@@ -6,4 +6,4 @@ Type in a username for a Github user, and click search. Find the right user, cli
 
 This application is live at https://msgithubfinder.netlify.app
 
-This application was built using a template from Brad Traversy.
+
