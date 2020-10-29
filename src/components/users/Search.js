@@ -31,7 +31,7 @@ const Search = () => {
             placeholder='Search Users...'
             value={text}
             onChange={onChange}
-            className='bg-gray-700 rounded'
+            className='bg-gray-700 text-white rounded'
           />
           {githubContext.users.length === 0 && (
             <input
