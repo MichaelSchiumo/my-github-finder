@@ -35,7 +35,7 @@ const User = ({ match }) => {
   }
 
   return (
-    <div className='max-w-5xl mx-auto mt-10 bg-gray-700 text-white'>
+    <div className='max-w-5xl mx-auto bg-gray-700 text-white rounded'>
       <Link to='/' className='btn btn-dark rounded m-1'>
         Go Back
       </Link>
@@ -54,7 +54,7 @@ const User = ({ match }) => {
         <div className='border-solid border-4 border-gray-900 p-10 bg-gray-800 rounded'>
           {bio && (
             <Fragment>
-              <p>{bio}</p>
+              <p className='-mt-4'>{bio}</p>
             </Fragment>
           )}
           <a href={html_url} className='btn btn-dark my-1 rounded'>
@@ -68,14 +68,14 @@ const User = ({ match }) => {
                 </Fragment>
               )}
             </li>
-            <li className='mt-2'>
+            <li className='mt-1'>
               {company && (
                 <Fragment>
                   <strong>Company: {company}</strong>
                 </Fragment>
               )}
             </li>
-            <li className='mt-2'>
+            <li className='mt-1'>
               {blog && (
                 <Fragment>
                   <strong>Website: {blog}</strong>
