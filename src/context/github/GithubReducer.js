@@ -4,6 +4,8 @@ import {
   CLEAR_USERS,
   GET_USER,
   GET_REPOS,
+  CLEAR_USER,
+  CLEAR_REPOS,
 } from '../types';
 
 export default (state, action) => {
@@ -25,6 +27,12 @@ export default (state, action) => {
         users: [],
         loading: false,
       };
+    case CLEAR_USER:
+      return {
+        ...state,
+        user: {},
+        loading: false,
+      };
     case GET_USER:
       return {
         ...state,
@@ -32,6 +40,12 @@ export default (state, action) => {
         loading: false,
       };
     case GET_REPOS:
+      return {
+        ...state,
+        repos: action.payload,
+        loading: false,
+      };
+    case CLEAR_REPOS:
       return {
         ...state,
         repos: action.payload,

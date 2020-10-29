@@ -27,7 +27,6 @@ const User = ({ match }) => {
     following,
     public_repos,
     public_gists,
-
     company,
   } = user;
 
@@ -36,9 +35,9 @@ const User = ({ match }) => {
   }
 
   return (
-    <Fragment>
-      <Link to='/' className='btn btn-dark'>
-        Back to Search
+    <div className='max-w-5xl mx-auto mt-10'>
+      <Link to='/' className='btn btn-dark rounded'>
+        Go Back
       </Link>
 
       <div className='card grid-2'>
@@ -96,7 +95,7 @@ const User = ({ match }) => {
         <badge className='badge badge-dark'>Public Gists: {public_gists}</badge>
       </div>
       <Repos repos={repos} />
-    </Fragment>
+    </div>
   );
 };
 

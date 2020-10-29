@@ -9,6 +9,8 @@ import {
   CLEAR_USERS,
   GET_USER,
   GET_REPOS,
+  CLEAR_USER,
+  CLEAR_REPOS,
 } from '../types';
 
 let githubClientId;
@@ -79,6 +81,13 @@ const GithubState = (props) => {
   //clear users
   const clearUsers = () => dispatch({ type: CLEAR_USERS });
 
+  //clear repos
+  const clearRepos = () => dispatch({ type: CLEAR_REPOS });
+
+  //clear user
+
+  const clearUser = () => dispatch({ type: CLEAR_USER });
+
   //set loading
   const setLoading = () => dispatch({ type: SET_LOADING });
 
@@ -91,8 +100,10 @@ const GithubState = (props) => {
         repos: state.repos,
         loading: state.loading,
         clearUsers,
+        clearUser,
         getUser,
         getUserRepos,
+        clearRepos,
       }}
     >
       {props.children}

@@ -15,6 +15,7 @@ const Search = () => {
     } else {
       githubContext.searchUsers(text);
       setText('');
+      githubContext.clearUsers();
     }
   };
 
@@ -22,30 +23,32 @@ const Search = () => {
 
   return (
     <div>
-      <form onSubmit={onSubmit} className='max-w-5xl mx-auto'>
-        <input
-          type='text'
-          name='text'
-          placeholder='Search Users...'
-          value={text}
-          onChange={onChange}
-        />
-        {githubContext.users.length === 0 && (
+      <div>
+        <form onSubmit={onSubmit} className='max-w-5xl mx-auto'>
           <input
-            type='submit'
-            value='Search'
-            className='btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1'
+            type='text'
+            name='text'
+            placeholder='Search Users...'
+            value={text}
+            onChange={onChange}
           />
+          {githubContext.users.length === 0 && (
+            <input
+              type='submit'
+              value='Search'
+              className='btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1'
+            />
+          )}
+        </form>
+        {githubContext.users.length > 0 && (
+          <button
+            className='max-w-5xl mx-auto btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1 btn-block'
+            onClick={githubContext.clearUsers}
+          >
+            Clear
+          </button>
         )}
-      </form>
-      {githubContext.users.length > 0 && (
-        <button
-          className='max-w-5xl mx-auto btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1 btn-block'
-          onClick={githubContext.clearUsers}
-        >
-          Clear
-        </button>
-      )}
+      </div>
     </div>
   );
 };
