@@ -49,7 +49,7 @@ const User = ({ match }) => {
             style={{ width: '150px' }}
           />
           <h1 className='mt-2'>{name}</h1>
-          <p>Location: {location}</p>
+          {location && <p>Location: {location}</p>}
         </div>
         <div className='border-solid border-4 border-gray-900 p-10 bg-gray-800 rounded'>
           {bio && (
