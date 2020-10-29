@@ -9,6 +9,9 @@ import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
 import './styles/main.css';
 import Footer from './components/Footer';
+import './App.css';
+import Users from './components/users/Users.js';
+import Search from './components/users/Search.js';
 
 const App = () => {
   return (
@@ -19,6 +22,7 @@ const App = () => {
             <NavBar sticky='top' />
             <div id='body' className='h-1/2 min-h-screen'>
               <Alert />
+              <Search />
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/user/:login' component={User} />
