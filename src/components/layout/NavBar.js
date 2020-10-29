@@ -20,20 +20,6 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-            <div className='ml-3 relative'>
-              <div>
-                <button
-                  className='flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out'
-                  id='user-menu'
-                  aria-label='User menu'
-                  aria-haspopup='false'
-                ></button>
-              </div>
-
-              <div className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg'></div>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
