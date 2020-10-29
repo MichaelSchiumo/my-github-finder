@@ -8,7 +8,7 @@ const Logos1 = () => {
           <h1 className='text-2xl mb-4 text-white font-legal font-extrabold'>
             Current Stack
           </h1>
-          <div class='grid grid-rows-1 gap-8 md:grid-cols-6 lg:grid-cols-10'>
+          <div class='grid grid-rows-1 gap-8 md:grid-rows-1 md:grid-cols-10 lg:grid-cols-10'>
             <div class='col-span-1 flex justify-center md:col-span-2 lg:col-span-1'>
               <span className='fab fa-js-square fa-3x text-sm lg:text-2xl text-white'></span>
             </div>
