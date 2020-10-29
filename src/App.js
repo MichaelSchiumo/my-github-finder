@@ -20,7 +20,7 @@ const App = () => {
         <Router>
           <div className='bg-gray-500'>
             <NavBar />
-            <div id='body' className='min-h-screen'>
+            <div id='body' className='min-h-screen mb-4'>
               <Alert />
               <Search className='mx-auto' />
               <Switch>

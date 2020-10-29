@@ -93,7 +93,12 @@ const User = ({ match }) => {
         </badge>
         <badge className='badge badge-dark'>Public Gists: {public_gists}</badge>
       </div>
-      <Repos repos={repos} />
+      <div className='border-solid border-4 border-gray-900 px-4 text-center'>
+        <h1 className='font-legal font-extrabold text-xl mt-2'>Recent Repos</h1>
+        <div className='grid grid-cols-5'>
+          <Repos repos={repos} />
+        </div>
+      </div>
     </div>
   );
 };
