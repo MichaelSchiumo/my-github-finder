@@ -9,6 +9,8 @@ import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
 import './styles/main.css';
 import Footer from './components/Footer';
+import Title from './components/Title';
+import Icons from './components/Icons.js';
 import './App.css';
 
 import Search from './components/users/Search.js';
@@ -19,8 +21,8 @@ const App = () => {
       <AlertState>
         <Router>
           <div className='bg-gray-500'>
-            <NavBar />
             <div id='body' className='min-h-screen mb-4'>
+              <Title />
               <Alert />
               <Search className='mx-auto' />
               <Switch>
@@ -29,6 +31,7 @@ const App = () => {
                 <Route component={NotFound} />
               </Switch>
             </div>
+            <Icons />
             <Footer />
           </div>
         </Router>
