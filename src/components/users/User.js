@@ -35,30 +35,29 @@ const User = ({ match }) => {
   }
 
   return (
-    <div className='max-w-5xl mx-auto mt-10'>
-      <Link to='/' className='btn btn-dark rounded'>
+    <div className='max-w-5xl mx-auto mt-10 bg-gray-700 text-white'>
+      <Link to='/' className='btn btn-dark rounded m-1'>
         Go Back
       </Link>
 
       <div className='card grid-2'>
-        <div className='all-center'>
+        <div className='all-center border-solid border-4 border-gray-900 p-10 bg-gray-800 rounded'>
           <img
             src={avatar_url}
             className='round-img'
             alt=''
             style={{ width: '150px' }}
           />
-          <h1>{name}</h1>
+          <h1 className='mt-2'>{name}</h1>
           <p>Location: {location}</p>
         </div>
-        <div>
+        <div className='border-solid border-4 border-gray-900 p-10 bg-gray-800 rounded'>
           {bio && (
             <Fragment>
-              <h3>Bio</h3>
               <p>{bio}</p>
             </Fragment>
           )}
-          <a href={html_url} className='btn btn-dark my-1'>
+          <a href={html_url} className='btn btn-dark my-1 rounded'>
             Visit Github Profile
           </a>
           <ul>
@@ -69,14 +68,14 @@ const User = ({ match }) => {
                 </Fragment>
               )}
             </li>
-            <li>
+            <li className='mt-2'>
               {company && (
                 <Fragment>
                   <strong>Company: {company}</strong>
                 </Fragment>
               )}
             </li>
-            <li>
+            <li className='mt-2'>
               {blog && (
                 <Fragment>
                   <strong>Website: {blog}</strong>
