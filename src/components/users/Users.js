@@ -12,7 +12,7 @@ const Users = () => {
     return <Spinner />;
   } else {
     return (
-      <div className='max-w-6xl grid grid-cols-3 mx-auto'>
+      <div className='max-w-5xl grid grid-cols-3 mx-auto'>
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}

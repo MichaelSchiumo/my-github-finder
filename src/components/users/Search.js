@@ -22,7 +22,7 @@ const Search = () => {
 
   return (
     <div>
-      <form onSubmit={onSubmit} className='max-w-6xl mx-auto'>
+      <form onSubmit={onSubmit} className='max-w-5xl mx-auto'>
         <input
           type='text'
           name='text'
@@ -30,15 +30,17 @@ const Search = () => {
           value={text}
           onChange={onChange}
         />
-        <input
-          type='submit'
-          value='Search'
-          className='btn btn-light btn-block'
-        />
+        {githubContext.users.length === 0 && (
+          <input
+            type='submit'
+            value='Search'
+            className='btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1'
+          />
+        )}
       </form>
       {githubContext.users.length > 0 && (
         <button
-          className='btn btn-light btn-block'
+          className='max-w-5xl mx-auto btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1 btn-block'
           onClick={githubContext.clearUsers}
         >
           Clear
