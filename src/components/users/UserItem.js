@@ -8,10 +8,10 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
       <img
         src={avatar_url}
         alt=''
-        className='round-img'
+        className='round-img mx-auto'
         style={{ width: '60px' }}
       />
-      <h3>{login}</h3>
+      <h3 className='mt-2 text-lg font-legal extrabold'>{login}</h3>
 
       <div>
         <Link to={`/user/${login}`} className='btn btn-dark btn-sm my-1'>

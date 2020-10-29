@@ -24,7 +24,7 @@ const Search = () => {
   return (
     <div>
       <div>
-        <form onSubmit={onSubmit} className='max-w-5xl mx-auto'>
+        <form onSubmit={onSubmit} className='sm:w-1/2 lg:max-w-5xl mx-auto'>
           <input
             type='text'
             name='text'
