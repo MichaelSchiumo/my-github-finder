@@ -10,7 +10,7 @@ import NotFound from './components/pages/NotFound';
 import './styles/main.css';
 import Footer from './components/Footer';
 import './App.css';
-import Users from './components/users/Users.js';
+
 import Search from './components/users/Search.js';
 
 const App = () => {
@@ -19,10 +19,10 @@ const App = () => {
       <AlertState>
         <Router>
           <div>
-            <NavBar sticky='top' />
-            <div id='body' className='h-1/2 min-h-screen'>
+            <NavBar />
+            <div id='body' className='min-h-screen'>
               <Alert />
-              <Search />
+              <Search className='mx-auto' />
               <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/user/:login' component={User} />
