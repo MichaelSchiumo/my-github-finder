@@ -18,7 +18,7 @@ const App = () => {
     <GithubState>
       <AlertState>
         <Router>
-          <div>
+          <div className='bg-gray-500'>
             <NavBar />
             <div id='body' className='min-h-screen'>
               <Alert />

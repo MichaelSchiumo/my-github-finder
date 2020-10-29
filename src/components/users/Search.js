@@ -22,27 +22,28 @@ const Search = () => {
   const onChange = (e) => setText(e.target.value);
 
   return (
-    <div>
-      <div>
-        <form onSubmit={onSubmit} className='sm:w-1/2 lg:max-w-5xl mx-auto'>
+    <div className='p-2 lg:p-0'>
+      <div className='max-w-5xl mx-auto'>
+        <form onSubmit={onSubmit}>
           <input
             type='text'
             name='text'
             placeholder='Search Users...'
             value={text}
             onChange={onChange}
+            className='bg-gray-700 rounded'
           />
           {githubContext.users.length === 0 && (
             <input
               type='submit'
               value='Search'
-              className='btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1'
+              className='btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded p-1 mx-auto'
             />
           )}
         </form>
         {githubContext.users.length > 0 && (
           <button
-            className='max-w-5xl mx-auto btn-block bg-gray-900 hover:bg-gray-700 text-white font-bold rounded text-white p-1 btn-block'
+            className='btn-block btn-dark p-1'
             onClick={githubContext.clearUsers}
           >
             Clear

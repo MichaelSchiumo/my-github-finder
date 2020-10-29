@@ -12,19 +12,13 @@ const Users = () => {
     return <Spinner />;
   } else {
     return (
-      <div className='max-w-5xl grid grid-cols-3 mx-auto'>
+      <div className='mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-3'>
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}
       </div>
     );
   }
-};
-
-const userStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  gridGap: '1rem',
 };
 
 export default Users;
